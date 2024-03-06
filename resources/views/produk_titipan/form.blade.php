@@ -26,7 +26,7 @@
                                 <label for="exampleInputProdukTitipan">Harga Beli</label>
                                 <input type="number" class="form-control" id="harga_beli" value=""
                                     name="harga_beli">
-<label for="exampleInputProdukTitipan">Harga Jual</label>
+                                <label for="exampleInputProdukTitipan">Harga Jual</label>
                                 <input type="number" class="form-control" id="harga_jual" value=""
                                     name="harga_jual">
                                 <label for="exampleInputProdukTitipan">Stok</label>
@@ -35,7 +35,7 @@
                             <!-- /.card-body -->
                             <div class="card-footer">
                                 <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                                <button type="submit" class="btn btn-primary">Submit</button>
+                                <button type="submit" class="btn btn-dark">Submit</button>
                             </div>
                     </form>
                 </div>
@@ -46,3 +46,31 @@
     <!-- /.modal-dialog -->
 </div>
 </div>
+
+    <div class="modal fade" id="formImport" tabindex="1" role="dialog" aria-labelledby="ExampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-tittle" id="ExampleModalLabel">Import data paket</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form method="POST" action="{{ route('import-ProdukTitipan') }}" enctype="multipart/form-data">
+                        @csrf
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label for="ProdukTitipan">File Excel</label>
+                                <input type="file" name="import" id="import">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary" id="btn-submit">Upload</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div> 

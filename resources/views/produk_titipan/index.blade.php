@@ -9,22 +9,12 @@
         <div class="card">
             <div class="card-header">
                 <h3 class="card-title">@yield('content')</h3>
-
-                <div class="card-tools">
-                    <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-                        <i class="fas fa-minus"></i>
-                    </button>
-                    <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
-                        <i class="fas fa-times"></i>
-                    </button>
-                </div>
             </div>
             <div class="card-body">
                 @if (session('success'))
-                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    <div class="alert alert-info alert-dismissible fade show" role="alert">
                         {{ session('success') }}
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-</div>
+                    </div>
                 @endif
 
                 @if ($errors->any())
@@ -37,8 +27,14 @@
                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                     </div>
                 @endif
-                <button type="button" class="btn btn-link" data-toggle="modal" data-target="#formProdukTitipanModal">
+                <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#formProdukTitipanModal">
                     <i class="fas fa-plus"></i> Add Produk Titipan
+                </button>
+                <a href="{{ route('export-ProdukTitipan') }}" class="btn btn-warning">
+                    <i class="fas fa-file-download"></i> Export
+                </a>
+                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#formImport">
+                    <i class="fas fa-file-export"></i> Import
                 </button>
                 <!--Modal -->
                 @include('produk_titipan.form')
@@ -49,6 +45,7 @@
             <!-- /.card -->
             @include('produk_titipan.data')
     </section>
+    
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 @endsection

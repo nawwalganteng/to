@@ -16,4 +16,17 @@ class ProdukTitipanExport implements FromCollection
     {
         return ProdukTitipan::all();
     }
+
+    public function headings(): array
+    {
+        return[
+            'Nama_produk',
+            'Nama_supplier',
+            'Harga_beli',
+            'Harga_jual',
+            'Stok',
+            'Tanggal Input',
+            'Tanggal Update'
+        ];
+    }
 }

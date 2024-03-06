@@ -85,6 +85,8 @@ Route::middleware('auth')->group(function () {
         Route::delete('/{id}', 'destroy')->name('stok.destroy');
     });
 
-    
+    Route::get('export/ProdukTitipan', [ProdukTitipanController::class, 'exportData'])->name('export-ProdukTitipan');
+    Route::post('ProdukTitipan/import', [ProdukTitipanController::class, 'importData'])->name('import-ProdukTitipan');
+
     
 });

@@ -8,6 +8,9 @@ use Exception;
 use App\Http\Requests\ProdukTitipanRequest;
 use Illuminate\Database\QueryException;
 use App\Http\Requests\StoreProdukTitipanRequest;
+use Maatwebsite\Excel\Facades\Excel;
+use App\Exports\ProdukTitipanExport;
+use App\Imports\ProdukTitipanImport;
 
 class ProdukTitipanController extends Controller
 {
@@ -99,5 +102,16 @@ class ProdukTitipanController extends Controller
         } catch (QueryException | Exception | PDOException $error) {
             return 'haha' . $error->getMessage();$this->failResponse($error->getMessage() . $error->getCode());
         }
+    }
+    
+    public function exportData(){
+         $date = date('Y-m-d');
+        return Excel::download(new ProdukTitipanExport, $date. '_paket.xlsx');
+    }
+
+    public function importData(){
+        Excel::import(new ProdukTitipanImport, request()->file('import'));
+
+        return redirect('ProdukTitipan')->with('success', 'Import data berhasil!');
     }
 }
