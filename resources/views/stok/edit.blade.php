@@ -11,14 +11,14 @@
         <div class="row">
             <div class="col mb-3">
                 <label class="form-label">Nama Produk</label>
-                <input type="text" name="stok" class="form-control" placeholder="stok" value="{{ $stok->stok}}">
+                <input type="text" name="stok" class="form-control" placeholder="Nama Produk" value="{{ $stok->stok}}">
             </div>
             </div>
     
             <div class="row">
             <div class="col mb-3">
-                <label class="form-label">QTY</label>
-                <input type="text" name="qty" class="form-control" placeholder="qty" value="{{ $stok->qty}}">
+                <label class="form-label">Stok</label>
+                <input type="text" name="qty" class="form-control" placeholder="Stok" value="{{ $stok->qty}}">
             </div>
         </div>
         <div class="row">

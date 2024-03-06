@@ -1,7 +1,7 @@
 <ul class="navbar-nav bg-gradient-info sidebar sidebar-dark accordion" id="accordionSidebar">
   
   <!-- Sidebar - Brand -->
-  <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+  <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ route('dashboard') }}">
     <div class="sidebar-brand-icon rotate-n-15">
       <i class="fa-solid fa-w"></i>
     </div>
@@ -11,13 +11,7 @@
   <!-- Divider -->
   <hr class="sidebar-divider my-0">
   
-  <!-- Nav Item - Dashboard -->
-  <li class="nav-item">
-    <a class="nav-link" href="{{ route('dashboard') }}">
-      <i class="fas fa-mosque"></i>
-      <span>Dashboard</span></a>
-  </li>
-  
+  <!-- Nav Item - Dashboard -->  
   <li class="nav-item">
     <a class="nav-link" href="{{ route('products') }}">
       <i class="fas fa-hippo"></i>
@@ -41,8 +35,26 @@
      <i class="fas fa-dragon"></i>
       <span>Stok</span></a>
   </li>
-  
-  
+
+    <li class="nav-item">
+    <a class="nav-link" href="{{ route('pemesanan') }}">
+     <i class="fas fa-spider"></i>
+      <span>Pemesanan</span></a>
+  </li>
+
+      <li class="nav-item">
+    <a class="nav-link" href="{{ route('produk_titipan') }}">
+     <i class="fas fa-kiwi-bird"></i>
+      <span>Produk Titipan</span></a>
+  </li>
+
+    <li class="nav-item">
+    <a class="nav-link" href="{{ route('dashboard') }}">
+      <i class="fas fa-mosque"></i>
+      <span>Tentang Aplikasi</span></a>
+  </li>
+
+
   <!-- Divider -->
   <hr class="sidebar-divider d-none d-md-block">
   

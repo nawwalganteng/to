@@ -9,16 +9,16 @@
         @csrf
         <div class="row mb-3">
             <div class="col">
-                <input type="text" name="nama_jenis" class="form-control" placeholder="nama_jenis">
+                <input type="text" name="nama_jenis" class="form-control" placeholder="Nama Jenis">
             </div>
             </div>
 
             <div class="row mb-3">
             <div class="col">
-                <input type="text" name="kategori_id" class="form-control" placeholder="kategori_id">
+                <input type="text" name="kategori_id" class="form-control" placeholder="ID Kategori">
             </div>
         </div>
- 
+
         <div class="row">
             <div class="d-grid">
                 <button type="submit" class="btn btn-info">Kirim</button>

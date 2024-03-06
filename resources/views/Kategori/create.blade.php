@@ -9,7 +9,7 @@
         @csrf
         <div class="row mb-3">
             <div class="col">
-                <input type="text" name="nama" class="form-control" placeholder="nama">
+                <input type="text" name="nama" class="form-control" placeholder="Nama Kategori">
             </div>
         </div>
  

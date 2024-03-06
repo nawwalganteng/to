@@ -11,7 +11,7 @@
         <div class="row">
             <div class="col mb-3">
                 <label class="form-label">Nama Kategori</label>
-                <input type="text" name="nama" class="form-control" placeholder="nama" value="{{ $kategori->nama}}">
+                <input type="text" name="nama" class="form-control" placeholder="Nama Kategori" value="{{ $kategori->nama}}">
             </div>
         </div>
         <div class="row">

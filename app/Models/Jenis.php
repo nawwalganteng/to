@@ -13,4 +13,14 @@ class Jenis extends Model
         'kategori_id',
 
     ];
+
+    public function menu()
+    {
+        return $this->hasMany(Product::class, 'jenis_id', 'id');
+    }
+
+    public function product()
+    {
+        return $this->hasMany(Product::class, 'jenis_id', 'id');
+    }
 }

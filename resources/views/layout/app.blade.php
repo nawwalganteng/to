@@ -13,6 +13,7 @@
   
   <!-- Custom styles for this template-->
   <link href="{{ asset('admin_assets/css/sb-admin-2.min.css') }}" rel="stylesheet">
+  @stack('style')
 </head>
 <body id="page-top">
   <!-- Page Wrapper -->
@@ -75,5 +76,6 @@
   <script src="{{ asset('admin_assets/js/sb-admin-2.min.js') }}"></script>
   <!-- Page level plugins -->
   <script src="{{ asset('admin_assets/vendor/chart.js/Chart.min.js') }}"></script>
+  @stack('script')
 </body>
 </html>

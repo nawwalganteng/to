@@ -11,7 +11,7 @@
             <input type="text" name="nama_jenis" class="form-control" placeholder="nama_jenis" value="{{ $jenis->nama_jenis }}" readonly>
         </div>
         <div class="col mb-3">
-            <label class="form-label">Kategori ID</label>
+            <label class="form-label">ID Kategori</label>
             <input type="text" name="kategori_id" class="form-control" placeholder="kategori_id" value="{{ $jenis->kategori_id }}" readonly>
         </div>
     </div>

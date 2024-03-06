@@ -11,14 +11,14 @@
         <div class="row">
             <div class="col mb-3">
                 <label class="form-label">Nama Jenis</label>
-                <input type="text" name="nama_jenis" class="form-control" placeholder="nama_jenis" value="{{ $jenis->nama_jenis}}">
+                <input type="text" name="nama_jenis" class="form-control" placeholder="Nama Jenis" value="{{ $jenis->nama_jenis}}">
             </div>
             </div>
     
             <div class="row">
             <div class="col mb-3">
-                <label class="form-label">Kategori id</label>
-                <input type="text" name="kategori_id" class="form-control" placeholder="kategori_id" value="{{ $jenis->kategori_id}}">
+                <label class="form-label">ID Kategori</label>
+                <input type="text" name="kategori_id" class="form-control" placeholder="ID Kategori" value="{{ $jenis->kategori_id}}">
             </div>
         </div>
         <div class="row">

@@ -5,7 +5,7 @@
 @section('contents')
     <div class="d-flex align-items-center justify-content-between">
         <h1 class="mb-0">List Product</h1>
-        <a href="{{ route('products.create') }}" class="btn btn-info">Tambah Product</a>
+        <a href="{{ route('products.create') }}" class="btn btn-primary">Tambah Product</a>
     </div>
     <hr />
     @if(Session::has('success'))
@@ -13,15 +13,18 @@
             {{ Session::get('success') }}
         </div>
     @endif
+    <div class="form-group">
+
+    </div>
     <table class="table table-hover">
-        <thead class="table-info">
+        <thead class="table-primary">
             <tr>
                 <th>No</th>
                 <th>Nama Produk</th>
                 <th>Action</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody id="productTableBody">
             @if($product->count() > 0)
                 @foreach($product as $rs)
                     <tr>
@@ -32,10 +35,10 @@
                             <div class="btn-group" role="group" aria-label="Basic example">
                                 <a href="{{ route('products.show', $rs->id) }}" type="button" class="btn btn-secondary">Detail</a>
                                 <a href="{{ route('products.edit', $rs->id)}}" type="button" class="btn btn-warning">Edit</a>
-                                <form action="{{ route('products.destroy', $rs->id) }}" method="POST" type="button" class="btn btn-info p-0" onsubmit="return confirm('Hapus?')">
+                                <form action="{{ route('products.destroy', $rs->id) }}" method="POST" type="button" class="btn btn-danger p-0" onsubmit="return confirm('Hapus?')">
                                     @csrf
                                     @method('DELETE')
-                                    <button class="btn btn-info m-0">Hapus</button>
+                                    <button class="btn btn-danger m-0">Hapus</button>
                                 </form>
                             </div>
                         </td>
@@ -48,4 +51,25 @@
             @endif
         </tbody>
     </table>
+    <script>
+    document.getElementById("searchInput").addEventListener("keyup", function() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("searchInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("productTableBody");
+        tr = table.getElementsByTagName("tr");
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[1]; // Change index if the column where you want to search is different
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    });
+</script>
+
 @endsection

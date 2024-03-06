@@ -9,13 +9,13 @@
         @csrf
         <div class="row mb-3">
             <div class="col">
-                <input type="text" name="stok" class="form-control" placeholder="stok">
+                <input type="text" name="stok" class="form-control" placeholder="Nama Produk">
             </div>
             </div>
 
             <div class="row mb-3">
             <div class="col">
-                <input type="text" name="qty" class="form-control" placeholder="qty">
+                <input type="text" name="qty" class="form-control" placeholder="Stok">
             </div>
         </div>
  
